@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/home">
+    <fragment
+        android:id="@+id/hotels"
+        android:name="com.example.firstt.HotelFragment"
+        android:label="hotels"
+        tools:layout="@layout/fragment_hotel" >
+        <action
+            android:id="@+id/action_hotelFragment2_to_hotelResultsFragment2"
+            app:destination="@id/hotelResultsFragment2" />
+        <action
+            android:id="@+id/action_hotelFragment2_to_homeFragment"
+            app:destination="@id/home" />
+    </fragment>
+    <fragment
+        android:id="@+id/hotelResultsFragment2"
+        android:name="com.example.firstt.hotelResultsFragment"
+        android:label="fragment_hotel_results"
+        tools:layout="@layout/fragment_hotel_results" >
+        <action
+            android:id="@+id/action_hotelResultsFragment2_to_homeFragment"
+            app:destination="@id/home" />
+        <action
+            android:id="@+id/action_hotelResultsFragment2_to_hotelFragment22"
+            app:destination="@id/hotels" />
+        <action
+            android:id="@+id/action_hotelResultsFragment2_self"
+            app:destination="@id/hotelResultsFragment2" />
+        <action
+            android:id="@+id/action_hotelResultsFragment2_to_hoteldetails2"
+            app:destination="@id/hoteldetails2" />
+    </fragment>
+    <fragment
+        android:id="@+id/restos"
+        android:name="com.example.firstt.RestaurantFragment"
+        android:label="restaurants"
+        tools:layout="@layout/fragment_restaurant" >
+        <action
+            android:id="@+id/action_restaurantFragment2_to_homeFragment"
+            app:destination="@id/home" />
+        <action
+            android:id="@+id/action_restos_to_home"
+            app:destination="@id/home" />
+        <action
+            android:id="@+id/action_restos_to_resto_results"
+            app:destination="@id/resto_results" />
+    </fragment>
+    <fragment
+        android:id="@+id/home"
+        android:name="com.example.firstt.HomeFragment"
+        android:label="home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_hotelFragment2"
+            app:destination="@id/hotels" />
+        <action
+            android:id="@+id/action_homeFragment_to_restaurantFragment22"
+            app:destination="@id/restos" />
+        <action
+            android:id="@+id/action_home_to_attractions2"
+            app:destination="@id/attractions" />
+        <action
+            android:id="@+id/action_home_to_transport"
+            app:destination="@id/transport" />
+        <action
+            android:id="@+id/action_home_to_review"
+            app:destination="@id/review" />
+    </fragment>
+    <fragment
+        android:id="@+id/attractions"
+        android:name="com.example.firstt.attractions"
+        android:label="attractions"
+        tools:layout="@layout/fragment_attractions" >
+        <action
+            android:id="@+id/action_attractions_to_attractions_results"
+            app:destination="@id/attractions_results" />
+        <action
+            android:id="@+id/action_attractions_to_home"
+            app:destination="@id/home" />
+    </fragment>
+    <fragment
+        android:id="@+id/transport"
+        android:name="com.example.firstt.transport"
+        android:label="transport"
+        tools:layout="@layout/fragment_transport" >
+        <action
+            android:id="@+id/action_transport_to_home"
+            app:destination="@id/home" />
+    </fragment>
+    <fragment
+        android:id="@+id/hoteldetails2"
+        android:name="com.example.firstt.hoteldetails"
+        android:label="fragment_hoteldetails"
+        tools:layout="@layout/fragment_hoteldetails" >
+        <action
+            android:id="@+id/action_hoteldetails2_to_home"
+            app:destination="@id/home" />
+        <action
+            android:id="@+id/action_hoteldetails2_to_hotelResultsFragment2"
+            app:destination="@id/hotelResultsFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/resto_results"
+        android:name="com.example.firstt.Resto_results"
+        android:label="fragment_resto_results"
+        tools:layout="@layout/fragment_resto_results" >
+        <action
+            android:id="@+id/action_resto_results_to_restos"
+            app:destination="@id/restos" />
+        <action
+            android:id="@+id/action_resto_results_to_home"
+            app:destination="@id/home" />
+        <action
+            android:id="@+id/action_resto_results_to_restoDetails"
+            app:destination="@id/restoDetails" />
+        <action
+            android:id="@+id/action_resto_results_self"
+            app:destination="@id/resto_results" />
+    </fragment>
+    <fragment
+        android:id="@+id/attractions_results"
+        android:name="com.example.firstt.attractions_results"
+        android:label="fragment_attractions_results"
+        tools:layout="@layout/fragment_attractions_results" >
+        <action
+            android:id="@+id/action_attractions_results_to_attractions"
+            app:destination="@id/attractions" />
+        <action
+            android:id="@+id/action_attractions_results_to_home"
+            app:destination="@id/home" />
+        <action
+            android:id="@+id/action_attractions_results_to_attraction_details"
+            app:destination="@id/attraction_details" />
+        <action
+            android:id="@+id/action_attractions_results_self"
+            app:destination="@id/attractions_results" />
+    </fragment>
+    <fragment
+        android:id="@+id/restoDetails"
+        android:name="com.example.firstt.RestoDetails"
+        android:label="resto_details"
+        tools:layout="@layout/fragment_resto_details" >
+        <action
+            android:id="@+id/action_restoDetails_to_resto_results2"
+            app:destination="@id/resto_results" />
+        <action
+            android:id="@+id/action_restoDetails_to_home"
+            app:destination="@id/home" />
+    </fragment>
+    <fragment
+        android:id="@+id/attraction_details"
+        android:name="com.example.firstt.Attraction_details"
+        android:label="fragment_attraction_details"
+        tools:layout="@layout/fragment_attraction_details" >
+        <action
+            android:id="@+id/action_attraction_details_to_attractions_results"
+            app:destination="@id/attractions_results" />
+        <action
+            android:id="@+id/action_attraction_details_to_home"
+            app:destination="@id/home" />
+    </fragment>
+    <fragment
+        android:id="@+id/review"
+        android:name="com.example.firstt.Reviews"
+        android:label="review"
+        tools:layout="@layout/reviews" >
+        <action
+            android:id="@+id/action_review_to_home"
+            app:destination="@id/home" />
+    </fragment>
+</navigation>

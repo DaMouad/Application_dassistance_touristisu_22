@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="com_google_android_gms_fonts_certs">array_value</string-array>
+    <string-array name="languages">
+        <item>English</item>
+        <item>French</item>
+        <item>Arabic</item>
+        <item>Spanish</item>
+    </string-array>
+</resources>

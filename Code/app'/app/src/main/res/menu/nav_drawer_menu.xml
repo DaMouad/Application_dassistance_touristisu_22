@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:icon="@drawable/house"
+        android:id="@+id/home"
+        android:title="Home" />
+
+    <item android:title="Catrgories"  >
+        <menu>
+    <item
+        android:icon="@drawable/ic_baseline_hotel_24"
+        android:id="@+id/hotels"
+        android:title="Stays" />
+    <item
+        android:icon="@drawable/utensils"
+        android:id="@+id/restos"
+        android:title="Restaurants" />
+    <item
+        android:icon="@drawable/mountain"
+        android:id="@+id/attractions"
+        android:title="Attractions" />
+    <item
+        android:icon="@drawable/car"
+        android:id="@+id/transport"
+        android:title="Transport" />
+
+        </menu>
+    </item>
+    <item android:title="Others"  >
+        <menu>
+            <item android:id="@+id/review"
+                android:title="Review" />
+            <item android:id="@+id/about"
+                android:title="About" />
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RestaurantFragment">
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/Resto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="100dp"
+            android:text="Restaurants"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/backHome"
+            app:layout_constraintStart_toEndOf="@+id/backBtn_res"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/backBtn_res"
+
+            android:layout_width="66dp"
+            android:layout_height="77dp"
+
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="10dp"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:scaleX="1"
+            android:scaleY="1"
+            android:src="@drawable/ic_baseline_arrow_back_ios_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <ImageButton
+            android:id="@+id/backHome"
+            android:layout_width="66dp"
+            android:layout_height="77dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:scaleX="1"
+            android:scaleY="1"
+            android:src="@drawable/ic_baseline_home_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/result_textR"
+            android:layout_width="match_parent"
+            android:layout_height="307dp"
+
+            android:layout_marginTop="85dp"
+            android:background="#FFEFEA"
+            android:fontFamily="@font/inter_medium"
+            android:hint="Search for Restaurants..."
+
+            android:paddingStart="20dp"
+
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#FF9454"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="38dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/eczar"
+            android:padding="10dp"
+            android:inputType="textMultiLine"
+            android:text="Things you can specify while searching\n
+    • Kitchen Style\n     • Services (Delivery , Reservation..)\n"
+            android:textColor="#BDBDBD"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/result_textR" />
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/MicOnR"
+            android:layout_width="wrap_content"
+            android:layout_height="91dp"
+            android:layout_gravity="end|bottom"
+            android:layout_marginStart="170dp"
+            android:layout_marginTop="89dp"
+            android:clickable="true"
+            android:src="@drawable/micbtn"
+            app:backgroundTint="#FF9454"
+            app:fabSize="normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/search_res"
+            android:layout_width="116dp"
+            android:layout_height="51dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="91dp"
+            android:backgroundTint="#FF9454"
+            android:text="Search"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/MicOnR"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/rlanguages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="#FF9454"
+            android:spinnerMode="dropdown"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/backBtn_res" />
+        <CheckBox
+            android:id="@+id/rsearchname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="200dp"
+            android:layout_marginEnd="16dp"
+            android:text="Search only by Name"
+            android:textColor="#5A5858"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/search_res" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>

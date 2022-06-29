@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".attractions_results">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TextView
+            android:id="@+id/testview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="65dp"
+            android:layout_marginTop="46dp"
+            android:layout_marginEnd="73dp"
+            android:text="Attractions"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/backHomeA2"
+            app:layout_constraintStart_toEndOf="@+id/backBtn_att2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/backBtn_att2"
+
+            android:layout_width="66dp"
+            android:layout_height="77dp"
+            android:layout_margin="20dp"
+            android:layout_marginStart="25dp"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:scaleX="1"
+            android:scaleY="1"
+            android:src="@drawable/ic_baseline_arrow_back_ios_24"
+
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageButton
+            android:id="@+id/backHomeA2"
+            android:layout_width="66dp"
+            android:layout_height="77dp"
+            android:layout_margin="20dp"
+
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="16dp"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:scaleX="1"
+
+            android:scaleY="1"
+            android:src="@drawable/ic_baseline_home_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpeakableTextPresentCheck" />
+        <ImageButton
+            android:id="@+id/AFilter"
+            android:layout_width="66dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="23dp"
+            android:layout_marginEnd="20dp"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:scaleX="1.5"
+            android:scaleY="1"
+            android:src="@drawable/ic_baseline_filter_list_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/backHomeA2" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="23dp"
+            android:text="Results "
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/backBtn_att2" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_att"
+            android:layout_width="match_parent"
+            android:layout_height="512dp"
+            android:layout_gravity="top"
+            android:layout_marginTop="50dp"
+            android:scrollbars="vertical"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/backBtn_att2"
+            tools:listitem="@layout/att_items" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+Z
+</FrameLayout>
